@@ -39,6 +39,19 @@ namespace Infrastructure.Repositories.BranchRepos
 
         }
 
+        public async Task<BranchDto> GetBranchesById(int Id)
+        {
+            var myBranch = await GetByIdAsync(Id);
 
+            if (myBranch == null) return null;
+
+            return new BranchDto() { Id = myBranch.Id, 
+                                     BranchName = myBranch.BranchName, 
+                                     Address = new AddressDto() {  Address1 = myBranch.Address.Address1,
+                                                                   City = myBranch.Address.City,
+                                                                   Postcode = myBranch.Address.Postcode} 
+                                    };
+
+        }
     }
 }

@@ -3,6 +3,7 @@ using Application.Aggregates.CarBrandAggregate.Commands.Create;
 using Application.Aggregates.CarBrandAggregate.Queries;
 using Application.Common.Interfaces;
 using Application.Repositories;
+using CarHire.Services.Branchs;
 using Domain.Common;
 using Infrastructure.Data;
 using Infrastructure.Data.EfCore;
@@ -50,6 +51,8 @@ builder.Services.AddScoped<IUserLoginRepository, UserLoginRepository>();
 
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 
+
+builder.Services.AddScoped<IBranchService, BranchService>();
 
 builder.Services.AddScoped<IBranchRepository, BranchRepository>();
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();

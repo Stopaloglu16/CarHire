@@ -36,6 +36,11 @@ namespace Infrastructure.Data
         {
         }
 
+        public ApplicationDbContext(DbContextOptions options)
+          : base(options)
+        {
+        }
+
 #nullable enable
 
         public DbSet<Address> Addresses { get; set; }

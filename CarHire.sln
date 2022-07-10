@@ -31,7 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "Src\Presentation\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Src\Infrastructures\Infrastructure\Infrastructure.csproj", "{4B38E7A4-D5A9-4404-8213-802F09A24E0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.IntegrationTests", "Tests\Application.IntegrationTests\Application.IntegrationTests.csproj", "{83F69829-ED83-4581-88C1-86B9826E846B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.IntegrationTests", "Tests\Application.IntegrationTests\Application.IntegrationTests.csproj", "{83F69829-ED83-4581-88C1-86B9826E846B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrasture.RepositoryTests", "Tests\Infrasture.RepositoryTests\Infrasture.RepositoryTests.csproj", "{5B6B1E60-A43A-4878-AEE7-577B62384872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarHire.Services", "Src\Presentation\CarHire.Services\CarHire.Services.csproj", "{FD1B6085-C66B-48E3-88A9-060826A56853}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrasture.ServiceTests", "Tests\Infrasture.ServiceTests\Infrasture.ServiceTests.csproj", "{ADD8145A-6C0B-4866-8FE7-1A2A2AF58550}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +77,18 @@ Global
 		{83F69829-ED83-4581-88C1-86B9826E846B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83F69829-ED83-4581-88C1-86B9826E846B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83F69829-ED83-4581-88C1-86B9826E846B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6B1E60-A43A-4878-AEE7-577B62384872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6B1E60-A43A-4878-AEE7-577B62384872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6B1E60-A43A-4878-AEE7-577B62384872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6B1E60-A43A-4878-AEE7-577B62384872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD1B6085-C66B-48E3-88A9-060826A56853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD1B6085-C66B-48E3-88A9-060826A56853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD1B6085-C66B-48E3-88A9-060826A56853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD1B6085-C66B-48E3-88A9-060826A56853}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADD8145A-6C0B-4866-8FE7-1A2A2AF58550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD8145A-6C0B-4866-8FE7-1A2A2AF58550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD8145A-6C0B-4866-8FE7-1A2A2AF58550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD8145A-6C0B-4866-8FE7-1A2A2AF58550}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +105,9 @@ Global
 		{CD48D8BB-BC2D-401D-AD67-6EDB67DBC30A} = {E108C92E-BBB1-4874-AB30-CA66AA1DD43A}
 		{4B38E7A4-D5A9-4404-8213-802F09A24E0D} = {A380970F-F05F-4C65-9F7C-1AA512697FAC}
 		{83F69829-ED83-4581-88C1-86B9826E846B} = {A3A9DA38-90E7-4BB8-8FB1-E9C8A7C3A749}
+		{5B6B1E60-A43A-4878-AEE7-577B62384872} = {A3A9DA38-90E7-4BB8-8FB1-E9C8A7C3A749}
+		{FD1B6085-C66B-48E3-88A9-060826A56853} = {A380970F-F05F-4C65-9F7C-1AA512697FAC}
+		{ADD8145A-6C0B-4866-8FE7-1A2A2AF58550} = {A3A9DA38-90E7-4BB8-8FB1-E9C8A7C3A749}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6EE3300-8E84-48F3-B11C-E7BF364896CF}

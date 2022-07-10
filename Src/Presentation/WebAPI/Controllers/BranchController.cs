@@ -1,6 +1,7 @@
 ﻿using Application.Aggregates.BranchAggregate.Commands.Create;
 using Application.Aggregates.BranchAggregate.Queries;
 using Application.Repositories;
+using CarHire.Services.Branchs;
 using Domain.Entities.AddressAggregate;
 using Domain.Entities.BranchAggregate;
 using Microsoft.AspNetCore.Mvc;
@@ -9,54 +10,29 @@ namespace WebAPI.Controllers
 {
     public class BranchController : ApiController
     {
-        private readonly IBranchRepository _branchRepository;
-        private readonly IAddressRepository _addressRepository;
+        private readonly IBranchService _branchService;
 
-        public BranchController(IBranchRepository branchRepository, IAddressRepository addressRepository)
+        public BranchController(IBranchService branchService)
         {
-            _branchRepository = branchRepository;
-            _addressRepository = addressRepository;
+            _branchService = branchService;
         }
 
 
         [HttpGet]
         public async Task<IEnumerable<BranchDto>> Get()
         {
-            return await _branchRepository.GetBranches();
+            return await _branchService.GetBranches();
         }
 
         [HttpPost]
-        public async Task<ActionResult<int>> Create(CreateBranchRequest branch)
+        public async Task<ActionResult<CreateBranchResponse>> Create(CreateBranchRequest branch)
         {
             try
             {
-
-                var myRtn = await _addressRepository.AddAsync(new Address()
-                {
-                    Id = 0,
-                    Address1 = branch.Address.Address1,
-                    City = branch.Address.City,
-                    Postcode = branch.Address.Postcode,
-                    addressType = Domain.Enums.AddressType.BranchAddress
-                });
-
-
-                if (myRtn.Id > 0)
-                {
-                    var myBranch = await _branchRepository.AddAsync( new Branch() {
-                     
-                        BranchName = branch.BranchName,
-                        AddressId = myRtn.Id
-                    });   
-
-                    return  Ok(myBranch.Id);
-                }
-
-                return BadRequest(-1);
+                return await _branchService.Add(branch); ;
             }
             catch (Exception ex)
             {
-                await Task.Delay(500);
                 return BadRequest(ex.Message);
             }
         }
