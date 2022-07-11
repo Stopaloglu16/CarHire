@@ -35,8 +35,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.IntegrationTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarHire.Services", "Src\Presentation\CarHire.Services\CarHire.Services.csproj", "{FD1B6085-C66B-48E3-88A9-060826A56853}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrasture.ServiceTests", "Tests\Infrasture.ServiceTests\Infrasture.ServiceTests.csproj", "{11768C4C-138E-4607-94C7-FCFE65424CC7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,10 +77,6 @@ Global
 		{FD1B6085-C66B-48E3-88A9-060826A56853}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD1B6085-C66B-48E3-88A9-060826A56853}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD1B6085-C66B-48E3-88A9-060826A56853}.Release|Any CPU.Build.0 = Release|Any CPU
-		{11768C4C-138E-4607-94C7-FCFE65424CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11768C4C-138E-4607-94C7-FCFE65424CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11768C4C-138E-4607-94C7-FCFE65424CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11768C4C-138E-4607-94C7-FCFE65424CC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,7 +94,6 @@ Global
 		{4B38E7A4-D5A9-4404-8213-802F09A24E0D} = {A380970F-F05F-4C65-9F7C-1AA512697FAC}
 		{83F69829-ED83-4581-88C1-86B9826E846B} = {A3A9DA38-90E7-4BB8-8FB1-E9C8A7C3A749}
 		{FD1B6085-C66B-48E3-88A9-060826A56853} = {A380970F-F05F-4C65-9F7C-1AA512697FAC}
-		{11768C4C-138E-4607-94C7-FCFE65424CC7} = {A3A9DA38-90E7-4BB8-8FB1-E9C8A7C3A749}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6EE3300-8E84-48F3-B11C-E7BF364896CF}

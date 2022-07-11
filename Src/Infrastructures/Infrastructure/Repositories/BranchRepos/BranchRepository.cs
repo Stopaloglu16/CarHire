@@ -35,8 +35,6 @@ namespace Infrastructure.Repositories.BranchRepos
                                                         }
 
                                                     }).ToListAsync();
-
-
         }
 
         public async Task<BranchDto> GetBranchesById(int Id)
@@ -53,5 +51,6 @@ namespace Infrastructure.Repositories.BranchRepos
                                     };
 
         }
+
     }
 }

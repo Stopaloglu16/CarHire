@@ -8,6 +8,8 @@ namespace Application.Repositories
     {
         Task<IEnumerable<CarBrandDto>> GetCarBrands();
 
+        Task<CarBrandDto> GetCarBrandById(int Id);
+
     }
 
 }
