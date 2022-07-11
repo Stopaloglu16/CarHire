@@ -63,5 +63,13 @@ namespace CarHire.Services.Branchs
         {
             return await _branchRepository.GetBranchesById(Id);
         }
+
+
+        public async Task<Branch> DeleteBranchById(int Id)
+        {
+            return await _branchRepository.DeleteAsync(Id);
+        }
+
+
     }
 }
