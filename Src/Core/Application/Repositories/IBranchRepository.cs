@@ -8,6 +8,8 @@ namespace Application.Repositories
     {
         Task<IEnumerable<BranchDto>> GetBranches();
 
+        Task<BranchDto> GetBranchesById(int Id);
+
     }
 
 }

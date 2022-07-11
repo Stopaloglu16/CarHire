@@ -13,7 +13,7 @@ namespace Domain.Entities.BranchAggregate
 
         [Required]
         [Column(TypeName = "varchar(50)")]
-        public string? BranchName { get; set; }
+        public string BranchName { get; set; }
 
         public int AddressId { get; set; }
         public Address Address { get; set; }

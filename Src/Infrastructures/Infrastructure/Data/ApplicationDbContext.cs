@@ -36,6 +36,7 @@ namespace Infrastructure.Data
         {
         }
 
+
 #nullable enable
 
         public DbSet<Address> Addresses { get; set; }

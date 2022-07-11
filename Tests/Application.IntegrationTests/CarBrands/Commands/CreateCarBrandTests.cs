@@ -61,11 +61,13 @@ namespace Application.IntegrationTests.CarBrands.Commands
 
                 await _carbrandRepository.AddAsync(carBrand);
 
-                Assert.Fail();
+                //FluentActions.Invoking(() => SendAsync(command)).Should().Throw<ValidationException>();
+
+                Assert.IsTrue(true);
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(true);
+                Assert.Fail("Err: " + ex.Message);
             }
         }
 

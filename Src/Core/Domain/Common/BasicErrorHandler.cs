@@ -13,17 +13,14 @@
         {
         }
 
-        public BasicErrorHandler(string? errorMessage, string? errorDeveloperMessage)
+        public BasicErrorHandler(string? errorMessage)
         {
+            HasError = true;
             ErrorMessage = errorMessage;
-            ErrorDeveloperMessage = errorDeveloperMessage;
         }
 
         public bool HasError { get; set; } = false;
         public string? ErrorMessage { get; set; }
-        public string? ErrorDeveloperMessage { get; set; }
-
-
 
     }
 }

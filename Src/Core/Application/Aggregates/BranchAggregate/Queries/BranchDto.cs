@@ -10,7 +10,7 @@ namespace Application.Aggregates.BranchAggregate.Queries
         public int Id { get; set; }
         public string? BranchName { get; set; }
 
-        public AddressDto? Address { get; set; }
+        public AddressDto? Address { get; set; } = new AddressDto();
 
     }
 }
