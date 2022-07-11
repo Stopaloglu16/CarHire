@@ -8,6 +8,10 @@ Console.WriteLine("Hello, World!");
 
 
 CarHireContext hireContext = new CarHireContext();
+
+
+
+
 //try
 //{
 
@@ -65,9 +69,11 @@ CarHireContext hireContext = new CarHireContext();
 
 //try
 //{
-//    carModel = new CarModel() { CarPhoto = "sdasd", CarPhotoLenght = 243, CarBrandId = 6,  SeatNumber = 5 };
+//    var branch = new Branch();
 
-//    hireContext.Set<CarModel>().Add(carModel);
+//    branch.BranchName = "";
+
+//    hireContext.Set<Branch>().Add(branch);
 //    await hireContext.SaveChangesAsync();
 
 //}

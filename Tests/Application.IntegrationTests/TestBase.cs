@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using System;
 using System.Threading.Tasks;
 
-namespace Infrasture.RepositoryTests
+namespace Application.IntegrationTests
 {
     public abstract class TestBase
     {

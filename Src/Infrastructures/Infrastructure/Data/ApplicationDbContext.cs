@@ -36,10 +36,6 @@ namespace Infrastructure.Data
         {
         }
 
-        public ApplicationDbContext(DbContextOptions options)
-          : base(options)
-        {
-        }
 
 #nullable enable
 

@@ -1,9 +1,6 @@
 ﻿using Application.Aggregates.BranchAggregate.Commands.Create;
 using Application.Aggregates.BranchAggregate.Queries;
-using Application.Repositories;
 using CarHire.Services.Branchs;
-using Domain.Entities.AddressAggregate;
-using Domain.Entities.BranchAggregate;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers

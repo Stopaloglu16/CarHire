@@ -131,7 +131,7 @@ var securityReq = new OpenApiSecurityRequirement
 var contact = new OpenApiContact()
 {
     Name = "Sertac Topaloglu",
-    Email = "sertac.topaloglu@hotmail.com",
+    Email = "sertac.topaloglu@hotmail.co.uk",
     Url = new Uri("https://sites.google.com/site/sertactopaloglu/home")
 };
 
