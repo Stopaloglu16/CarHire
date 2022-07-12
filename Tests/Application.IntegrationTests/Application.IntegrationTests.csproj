@@ -28,8 +28,6 @@
   <ItemGroup>
     <Folder Include="CarBrands\Queries\" />
     <Folder Include="CarHires\Queries\" />
-    <Folder Include="TestTemp\Commands\" />
-    <Folder Include="TestTemp\Queries\" />
   </ItemGroup>
 
 </Project>

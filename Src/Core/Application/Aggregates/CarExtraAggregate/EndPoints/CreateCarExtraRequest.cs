@@ -3,18 +3,18 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities.CarExtraAggregate.EndPoints
 {
-    public class CarExtraRequest : IMapFrom<CarExtra>
+    public class CreateCarExtraRequest : IMapFrom<CarExtra>
     {
-        public CarExtraRequest()
+        public CreateCarExtraRequest()
         { }
-        public CarExtraRequest(int _Id, string _Name, decimal _Cost)
+        public CreateCarExtraRequest(int _Id, string _Name, decimal _Cost)
         {
             Id = _Id;
             Name = _Name;
             Cost = _Cost;
         }
 
-        public int Id { get; set; }
+        public int Id { get; private set; }
 
         [Required]
         [StringLength(50)]
