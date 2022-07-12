@@ -11,7 +11,7 @@ enter into a contract with the rental company: they are agreeing to provide the 
 | Id | Tasks \ Users   | Company | Branch | Customer | Status |
 | -- | --------------- | - | - | - | - |
 | 1  | Cars Add\Edit   | ✅ |  |  | ![30%](https://progress-bar.dev/30)|
-| 2  | Branch Add\Edit | ✅ |  |  | ![0%](https://progress-bar.dev/0) |
+| 2  | Branch Add\Edit | ✅ |  |  | ![0%](https://progress-bar.dev/5) |
 | 3  | Car Hire Add    | ✅ |  | ✅ | ![0%](https://progress-bar.dev/0) |
 | 4  | Car Hire Pick   | ✅ | ✅ |  | ![0%](https://progress-bar.dev/0)|
 | 5  | Car Hire Return | ✅ | ✅ |  | ![0%](https://progress-bar.dev/0) |
