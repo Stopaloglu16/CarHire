@@ -16,6 +16,7 @@ namespace CarHire.Services.CarExtras
             _carExtraRepository = carExtraRepository;
         }
 
+
         public async Task<CreateCarExtraResponse> Add(CreateCarExtraRequest carExtra)
         {
             var myReturn = await _carExtraRepository.AddAsync(new CarExtra() { Name = carExtra.Name });
@@ -30,10 +31,11 @@ namespace CarHire.Services.CarExtras
             return await _carExtraRepository.GetCarExtraById(Id);
         }
 
-        public Task<IEnumerable<CarExtraDto>> GetCarBrands()
+        public async Task<IEnumerable<CarExtraDto>> GetCarBrands()
         {
-            throw new NotImplementedException();
+            return await _carExtraRepository.GetCarExtras();
         }
+
     }
 
 
