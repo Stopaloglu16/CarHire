@@ -27,12 +27,12 @@ namespace CarHire.Services.CarBrands
 
         public async Task<CarBrandDto> GetCarBrandById(int Id)
         {
-            return await  _carBrandRepository.GetCarBrandById(Id);
+            return await _carBrandRepository.GetCarBrandById(Id);
         }
 
-        public  Task<IEnumerable<CarBrandDto>> GetCarBrands()
+        public async Task<IEnumerable<CarBrandDto>> GetCarBrands()
         {
-            throw new NotImplementedException();
+            return await _carBrandRepository.GetCarBrands();
         }
     }
 }
