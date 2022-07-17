@@ -1,4 +1,5 @@
 ﻿using Application.Aggregates.CarAggregate.Commands.Create;
+using Application.Aggregates.CarAggregate.Commands.Update;
 using Application.Aggregates.CarAggregate.Queries;
 using Application.Repositories;
 using Domain.Common;
@@ -40,7 +41,7 @@ namespace CarHire.Services.Cars
             return new CreateCarResponse(myReturn.Id, new BasicErrorHandler());
         }
 
-        public async Task<CarDto> GetCarById(int Id)
+        public async Task<CarDto> GetCarDisplayById(int Id)
         {
             return await _carRepository.GetCarById(Id);
         }
@@ -55,21 +56,28 @@ namespace CarHire.Services.Cars
             throw new NotImplementedException();
         }
 
-      
-        //public async Task<CarModelDto> GetCarModelById(int Id)
-        //{
-        //    return await _carModelRepository.GetCarModelById(Id);
-        //}
+        public async Task<UpdateCarResponse> UpdateAsync(UpdateCarRequest updateCarRequest)
+        {
+            try
+            {
+                var myCurrenctValue = await _carRepository.GetByIdAsync(updateCarRequest.Id);
 
-        //public async Task<IEnumerable<CarModelDto>> GetCarModels()
-        //{
-        //    return await _carModelRepository.GetCarModels();
-        //}
+                myCurrenctValue.BranchId = updateCarRequest.BranchId;
+                myCurrenctValue.CarModelId = updateCarRequest.CarModelId;
+                myCurrenctValue.Gearbox = updateCarRequest.Gearbox;
+                myCurrenctValue.Mileage = updateCarRequest.Mileage;
 
-        //public async Task<IEnumerable<CarModelDto>> GetCarModelsByBrandId(int brandId)
-        //{
-        //    return await _carModelRepository.GetCarModelsByBrandId(brandId);
-        //}
+                await _carRepository.UpdateAsync(myCurrenctValue);
+
+                return new UpdateCarResponse(updateCarRequest.Id, new BasicErrorHandler());
+            }
+            catch (Exception ex)
+            {
+                return new UpdateCarResponse(updateCarRequest.Id, new BasicErrorHandler( ex.Message));
+            }
+
+        }
+
 
     }
 }

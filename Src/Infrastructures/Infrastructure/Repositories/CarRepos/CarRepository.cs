@@ -68,12 +68,13 @@ namespace Infrastructure.Repositories.CarRepos
                                  .Include(bb => bb.CarModel)
                                 .ThenInclude(cc => cc.CarBrand)
                                 .Include(bb => bb.Branch)
-                                //.Include(bb => bb.Gearbox)
                                 .Select(ss => new CarDto
                                 {
                                     Id = ss.Id,
-                                    NumberPlates = ss.NumberPlates,
+                                    NumberPlates = ss.NumberPlates.ToString(),
+                                    BranchId = ss.BranchId == null?0: ss.BranchId,
                                     BranchName = ss.Branch.BranchName == null?"": ss.Branch.BranchName,
+                                    CarModelId = ss.CarModel.Id,
                                     CarModelName = ss.CarModel.Name,
                                     GearboxName = ((Gearbox)ss.Gearbox).ToString(),
                                     Mileage = ss.Mileage,
@@ -82,6 +83,10 @@ namespace Infrastructure.Repositories.CarRepos
                                 }).FirstOrDefaultAsync();
 
         }
+
+
+
+
 
     }
 }

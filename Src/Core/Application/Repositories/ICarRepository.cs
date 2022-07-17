@@ -1,5 +1,4 @@
-﻿using Application.Aggregates.CarAggregate.Commands.Create;
-using Application.Aggregates.CarAggregate.Queries;
+﻿using Application.Aggregates.CarAggregate.Queries;
 using Application.Common.Interfaces;
 using Domain.Entities.CarAggregate;
 

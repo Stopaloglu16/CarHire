@@ -1,4 +1,5 @@
 ﻿using Application.Common.Interfaces;
+using Application.Repositories;
 using Domain.Entities.CarHireAggregate;
 using MediatR;
 
@@ -40,35 +41,49 @@ namespace Application.Aggregates.CarHireAggregate.Commands.Create
     public class CreateCarBrandCommandHandler : IRequestHandler<CreateCarHireCommand, int>
     {
         private readonly IApplicationDbContext _context;
+        private readonly ICarHireRepository _repo;
 
-        public CreateCarBrandCommandHandler(IApplicationDbContext context)
+        public CreateCarBrandCommandHandler(IApplicationDbContext context, ICarHireRepository repo)
         {
             _context = context;
+            _repo = repo;
         }
 
         public async Task<int> Handle(CreateCarHireCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                var entity = new CarHire();
 
-                entity.CarId = request.CarId;
-                entity.UserId = request.UserId;
-                entity.BookingCost = request.BookingCost;
+                if( await _repo.CheckCarAvabilityById(request.CarId))
+                {
 
-                entity.PickUpBranchId = request.PickUpBranchId;
-                entity.PickUpDate = request.PickUpDate;
-                entity.PickUpDateTime = request.PickUpDate;
+                    var entity = new CarHire();
 
-                entity.ReturnBranchId = request.ReturnBranchId;
-                entity.ReturnDate = request.ReturnDate;
-                entity.ReturnDateTime = request.ReturnDateTime;
+                    entity.CarId = request.CarId;
+                    entity.UserId = request.UserId;
+                    entity.BookingCost = request.BookingCost;
 
-                _context.CarHires.Add(entity);
+                    entity.PickUpBranchId = request.PickUpBranchId;
+                    entity.PickUpDate = request.PickUpDate;
+                    entity.PickUpDateTime = request.PickUpDate;
 
-                await _context.SaveChangesAsync(cancellationToken);
+                    entity.ReturnBranchId = request.ReturnBranchId;
+                    entity.ReturnDate = request.ReturnDate;
+                    entity.ReturnDateTime = request.ReturnDateTime;
 
-                return entity.Id;
+                    _context.CarHires.Add(entity);
+
+                    await _context.SaveChangesAsync(cancellationToken);
+
+                    return entity.Id;
+
+                }
+                else
+                {
+
+                    return 0;
+                }
+
             }
             catch (Exception ex)
             {
@@ -81,9 +96,22 @@ namespace Application.Aggregates.CarHireAggregate.Commands.Create
         //public async Task<bool> CheckAvailability(int _carId)
         //{
 
-        //    var isavailable = await _context.CarHires
-        //                                      .Where(cc => cc.CarId == _carId && cc. )
-        //                                      .ToList();
+        //    var myCar = await _context.Cars.FindAsync(_carId);
+
+        //    //myCar.BranchId
+
+        //    //var careHireList = await _context.CarHires
+        //    //                                  .Where(cc => cc.CarId == _carId && cc. )
+        //    //                                  .ToList();
+
+        //    var careHireList = await _context.CarHires.FromSqlRaw("Select * FROM [Portalnow].[dbo].[PostcodeGroups] " +
+        //   "WHERE Id IN(SELECT[PostcodeGroupId]" +
+        //   "FROM[Portalnow].[dbo].[CompanyZonePostcodes] " +
+        //    "WHERE[PostcodeId] = ( " +
+        //             "SELECT [Id] FROM[Portalnow].[dbo].[Postcodes] " +
+        //             "WHERE IsDeleted = 0 AND PostcodeText = '" + _carId + "') ) ").ToListAsync();
+
+
 
         //    return true;
 
