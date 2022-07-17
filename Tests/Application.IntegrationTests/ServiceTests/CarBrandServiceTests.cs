@@ -1,5 +1,6 @@
 ﻿using Application.IntegrationTests.TestData;
 using CarHire.Services.CarBrands;
+using Infrastructure.Data;
 using Infrastructure.Repositories.CarBrandRepos;
 using NUnit.Framework;
 using System;
@@ -27,6 +28,7 @@ namespace Application.IntegrationTests.ServiceTests
             carBrandData = new CarBrandData();
         }
 
+       
 
         [Test]
         public async Task ShouldBeAbleToAddAndGetEntity()

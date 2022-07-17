@@ -29,20 +29,7 @@ namespace WebAPI.Controllers
             try
             {
 
-                var myRtn = await _carRepository.AddAsync(new Car()
-                {
-                    Id = 0,
-                    NumberPlates = car.NumberPlates,
-                    BranchId = (int)car.BranchId,
-                    CarModelId = car.CarModelId,
-                    Gearbox = car.Gearbox,
-                    Mileage = car.Mileage,
-                    Costperday = car.Costperday
-
-                });
-
-
-                return Ok(myRtn.Id);
+                return Ok(1);
 
             }
             catch (Exception ex)

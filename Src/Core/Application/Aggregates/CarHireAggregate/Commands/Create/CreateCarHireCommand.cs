@@ -1,15 +1,10 @@
 ﻿using Application.Common.Interfaces;
 using Domain.Entities.CarHireAggregate;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Aggregates.CarHireAggregate.Commands.Create
 {
-    public class CreateCarHireCommand: IRequest<int>
+    public class CreateCarHireCommand : IRequest<int>
     {
         public CreateCarHireCommand(int carId, int userId, int pickUpBranchId, DateTime pickUpDate, DateTime pickUpDateTime, int returnBranchId, DateTime returnDate, DateTime returnDateTime, int returnMileage, decimal bookingCost)
         {
@@ -97,7 +92,7 @@ namespace Application.Aggregates.CarHireAggregate.Commands.Create
     }
 
 
- 
+
 
 
 }

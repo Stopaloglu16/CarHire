@@ -1,13 +1,11 @@
 ﻿using Application.IntegrationTests.TestData;
 using CarHire.Services.CarBrands;
 using CarHire.Services.CarModelService;
+using Infrastructure.Data;
 using Infrastructure.Repositories.CarBrandRepos;
 using Infrastructure.Repositories.CarModelRepos;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Application.IntegrationTests.ServiceTests
@@ -33,12 +31,8 @@ namespace Application.IntegrationTests.ServiceTests
         }
 
 
-        [Test]
-        public async Task ShouldBeAbleToAddAndGetEntity()
+        public async Task CreateCarBrand(ApplicationDbContext context)
         {
-
-            using var context = await GetDbContext();
-
             var myCarBrandRepository = new CarBrandRepository(context);
             var myCarBrandService = new CarBrandService(myCarBrandRepository);
 
@@ -50,7 +44,17 @@ namespace Application.IntegrationTests.ServiceTests
             {
                 await myCarBrandService.Add(myList[i]);
             }
+        }
+            
 
+        [Test]
+        public async Task ShouldBeAbleToAddAndGetEntity()
+        {
+
+            using var context = await GetDbContext();
+
+           
+            await CreateCarBrand(context);
 
             var myCarModelRepository = new CarModelRepository(context);
             var myCarModelService = new CarModelService(myCarModelRepository);

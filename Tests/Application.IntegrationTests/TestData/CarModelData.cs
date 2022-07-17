@@ -31,29 +31,49 @@ namespace Application.IntegrationTests.TestData
 
         public IEnumerable<CreateCarModelRequest> CreateCarModelData()
         {
-
             var myList = new List<CreateCarModelRequest>();
 
             for (int i = 0; i < carModelDtos.Count; i++)
             {
-                var createBranchRequest = new CreateCarModelRequest(carModelDtos[i].Name.ToString(),
+                var createModelRequest = new CreateCarModelRequest(carModelDtos[i].Name.ToString(),
                                                                                         carModelDtos[i].CarPhoto,
                                                                                         (int)carModelDtos[i].CarPhotoLenght,
                                                                                         carModelDtos[i].SeatNumber,
                                                                                         carModelDtos[i].CarBrandId);
 
-                myList.Add(createBranchRequest);
+                myList.Add(createModelRequest);
             }
 
             return myList;
         }
 
 
+        public CreateCarModelRequest CreateEmptyCarModelData()
+        {
+            var createModelRequest = new CreateCarModelRequest("",
+                                                                                    "",
+                                                                                    0,
+                                                                                    0,
+                                                                                    0);
+
+            return createModelRequest;
+        }
+
+        public CreateCarModelRequest CreateNullCarModelData()
+        {
+            var createModelRequest = new CreateCarModelRequest(null,
+                                                                                    null,
+                                                                                    0,
+                                                                                    0,
+                                                                                    0);
+
+            return createModelRequest;
+        }
+
         public IEnumerable<CarModelDto> DisplayCarModelData()
         {
             return carModelDtos;
         }
-
 
     }
 }

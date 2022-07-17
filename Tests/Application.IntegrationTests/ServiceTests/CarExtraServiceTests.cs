@@ -50,5 +50,13 @@ namespace Application.IntegrationTests.ServiceTests
 
         }
 
+
+        [TearDown]
+        public void Cleanup()
+        {
+            carExtraDto = null;
+            carExtraData = null;
+        }
+
     }
 }

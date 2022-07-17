@@ -1,10 +1,10 @@
 ﻿using Domain.Common;
 
-namespace Application.Aggregates.BranchAggregate.Commands.Create
+namespace Application.Aggregates.CarAggregate.Commands.Create
 {
-    public class CreateBranchResponse
+    public class CreateCarResponse
     {
-        public CreateBranchResponse(int id, BasicErrorHandler basicErrorHandler)
+        public CreateCarResponse(int id, BasicErrorHandler basicErrorHandler)
         {
             Id = id;
             this.basicErrorHandler = basicErrorHandler;
@@ -15,4 +15,6 @@ namespace Application.Aggregates.BranchAggregate.Commands.Create
         public BasicErrorHandler basicErrorHandler { get; set; } = new BasicErrorHandler();
 
     }
+
+
 }

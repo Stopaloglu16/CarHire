@@ -5,7 +5,7 @@ namespace Application.Aggregates.CarBrandAggregate.Commands.Create
 {
     public class CreateCarBrandCommandValidator : AbstractValidator<CreateCarBrandCommand>
     {
-      private readonly IApplicationDbContext _context;
+        private readonly IApplicationDbContext _context;
 
         public CreateCarBrandCommandValidator(IApplicationDbContext context)
         {

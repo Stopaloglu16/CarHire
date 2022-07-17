@@ -17,7 +17,7 @@ namespace Application.Aggregates.CarModelAggregate.Commands.Create
         [Required]
         public string? Name { get; }
 
-        public string CarPhoto { get; set; }
+        public string? CarPhoto { get; set; }
 
         public int CarPhotoLenght { get; set; }
         public int SeatNumber { get; set; }

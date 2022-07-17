@@ -5,9 +5,8 @@ namespace Application.Aggregates.CarAggregate.Commands.Create
 {
     public class CreateCarRequest
     {
-        public CreateCarRequest(int id, string? numberPlates, int? branchId, int carModelId, Gearbox gearbox, int mileage, decimal costperday = 1)
+        public CreateCarRequest(string? numberPlates, int? branchId, int carModelId, Gearbox gearbox, int mileage, decimal costperday = 1)
         {
-            Id = id;
             NumberPlates = numberPlates;
             BranchId = branchId;
             CarModelId = carModelId;

@@ -5,7 +5,6 @@ using Domain.Entities.CarModelAggregate;
 
 namespace CarHire.Services.CarModelService
 {
-
     public class CarModelService : ICarModelService
     {
 
