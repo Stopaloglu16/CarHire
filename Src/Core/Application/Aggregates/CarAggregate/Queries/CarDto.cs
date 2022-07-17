@@ -9,9 +9,14 @@ namespace Application.Aggregates.CarAggregate.Queries
         public int Id { get; set; }
 
         public string? NumberPlates { get; set; }
+
+        public int? BranchId { get; set; }
         public string? BranchName { get; set; }
+
+        public int CarModelId { get; set; }
         public string? CarModelName { get; set; }
 
+        public int GearboxId { get; set; }
         public string? GearboxName { get; set; }
         public int Mileage { get; set; } = 0;
 

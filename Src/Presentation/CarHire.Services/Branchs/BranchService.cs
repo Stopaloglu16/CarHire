@@ -48,7 +48,7 @@ namespace CarHire.Services.Branchs
                         AddressId = myRtn.Id
                     });
 
-                    return new CreateBranchResponse(myBranch.Id, new BasicErrorHandler( "Address not created"));
+                    return new CreateBranchResponse(myBranch.Id, new BasicErrorHandler("Address not created"));
                 }
 
                 return new CreateBranchResponse(-1, new BasicErrorHandler("Address not created"));

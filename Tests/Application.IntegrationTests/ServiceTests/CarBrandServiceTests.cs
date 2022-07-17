@@ -1,5 +1,6 @@
 ﻿using Application.IntegrationTests.TestData;
 using CarHire.Services.CarBrands;
+using Infrastructure.Data;
 using Infrastructure.Repositories.CarBrandRepos;
 using NUnit.Framework;
 using System;
@@ -12,7 +13,6 @@ namespace Application.IntegrationTests.ServiceTests
 {
     public class CarBrandServiceTests : TestBase
     {
-
         public CarBrandServiceTests()
         {
             UseSqlite();
@@ -20,7 +20,6 @@ namespace Application.IntegrationTests.ServiceTests
 
         private string? myCarBrand;
         private CarBrandData? carBrandData;
-        
 
         [SetUp]
         public void SetUp()
@@ -29,15 +28,15 @@ namespace Application.IntegrationTests.ServiceTests
             carBrandData = new CarBrandData();
         }
 
-
+       
 
         [Test]
         public async Task ShouldBeAbleToAddAndGetEntity()
         {
 
             using var context = await GetDbContext();
+       
             var myCarBrandRepository = new CarBrandRepository(context);
-
             var myCarBrandService = new CarBrandService(myCarBrandRepository);
 
             // Prepare

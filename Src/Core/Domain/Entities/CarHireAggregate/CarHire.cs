@@ -18,7 +18,7 @@ namespace Domain.Entities.CarHireAggregate
 
 
         [ForeignKey("PickUpBranch")]
-        public int? PickUpBranchId { get; set; }
+        public int PickUpBranchId { get; set; }
         public Branch PickUpBranch { get; set; }
 
 
@@ -29,7 +29,7 @@ namespace Domain.Entities.CarHireAggregate
 
 
         [ForeignKey("ReturnBranch")]
-        public int? ReturnBranchId { get; set; }
+        public int ReturnBranchId { get; set; }
         public Branch ReturnBranch { get; set; }
 
         [Column(TypeName = "Date")]

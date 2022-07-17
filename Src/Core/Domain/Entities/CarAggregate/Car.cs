@@ -18,9 +18,9 @@ namespace Domain.Entities.CarAggregate
 
         [Required]
         [Column(TypeName = "varchar(10)")]
-        public string? NumberPlates { get; set; }
+        public string NumberPlates { get; set; }
 
-        public int BranchId { get; set; }
+        public int? BranchId { get; set; }
         public Branch Branch { get; set; }
 
         public int CarModelId { get; set; }

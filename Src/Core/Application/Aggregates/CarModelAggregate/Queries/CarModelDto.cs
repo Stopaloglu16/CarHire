@@ -7,7 +7,7 @@ namespace Application.Aggregates.CarModelAggregate.Queries
     {
 
         public int Id { get; set; }
-        public string? Name { get; set; }
+        public string Name { get; set; }
         public string? CarPhoto { get; set; }
         public int? CarPhotoLenght { get; set; }
         public int SeatNumber { get; set; }

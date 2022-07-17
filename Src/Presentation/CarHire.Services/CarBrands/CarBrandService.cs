@@ -20,7 +20,7 @@ namespace CarHire.Services.CarBrands
         {
             var myReturn = await _carBrandRepository.AddAsync(new CarBrand() { Name = carBrand.BrandName });
 
-            if(myReturn == null) return new CreateCarBrandResponse(0, new Domain.Common.BasicErrorHandler( "SystemIssue" ));
+            if (myReturn == null) return new CreateCarBrandResponse(0, new Domain.Common.BasicErrorHandler("SystemIssue"));
 
             return new CreateCarBrandResponse(myReturn.Id, new Domain.Common.BasicErrorHandler());
         }

@@ -10,7 +10,6 @@
     <Folder Include="Aggregates\BranchAggregate\Commands\Delete\" />
     <Folder Include="Aggregates\BranchAggregate\Commands\Update\" />
     <Folder Include="Aggregates\CarAggregate\Commands\Delete\" />
-    <Folder Include="Aggregates\CarAggregate\Commands\Update\" />
     <Folder Include="Aggregates\CarHireAggregate\Commands\Delete\" />
     <Folder Include="Aggregates\CarHireAggregate\Commands\Update\" />
     <Folder Include="Aggregates\CarHireAggregate\Queries\" />

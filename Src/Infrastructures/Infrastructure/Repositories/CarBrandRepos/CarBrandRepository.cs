@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories.CarBrandRepos
 {
-
     public class CarBrandRepository : EfCoreRepository<CarBrand>, ICarBrandRepository
     {
         private readonly ApplicationDbContext _dbContext;
@@ -34,7 +33,5 @@ namespace Infrastructure.Repositories.CarBrandRepos
 
             }).ToListAsync();
         }
-
-
     }
 }

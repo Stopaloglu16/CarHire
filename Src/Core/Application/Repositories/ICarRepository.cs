@@ -8,6 +8,11 @@ namespace Application.Repositories
     public interface ICarRepository : IRepository<Car>
     {
         Task<IEnumerable<CarDto>> GetCars();
+
+        Task<CarDto> GetCarById(int Id);
+
+        Task<IEnumerable<CarDto>> GetCarByBranchId(int BranchId);
+
     }
 
 }
