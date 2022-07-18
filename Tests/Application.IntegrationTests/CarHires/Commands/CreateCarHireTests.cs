@@ -1,25 +1,23 @@
 ﻿using Application.Aggregates.CarHireAggregate.Commands.Create;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Application.IntegrationTests.CarHires.Commands
 {
-    public class CreateCarHireTests : TestBase
+    using static TestingCqrs;
+
+    public class CreateCarHireTests : TestBaseCqrs
     {
 
 
-
-
         [Test]
-        public async Task ShouldCreateTodoList()
+        public async Task ShouldCreateCarHireList()
         {
-           // var userId = await RunAsDefaultUserAsync();
+            // var userId = await RunAsDefaultUserAsync();
 
-            var command = new CreateCarHireCommand( 1,
+
+           var command = new CreateCarHireCommand(1,
                                                                     1,
                                                                     1,
                                                                     DateTime.Now.AddDays(1),
