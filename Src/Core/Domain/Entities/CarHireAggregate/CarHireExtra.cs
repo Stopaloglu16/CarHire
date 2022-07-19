@@ -7,7 +7,7 @@ namespace Domain.Entities.CarHireAggregate
     {
         [Key]
         public int CarHireId { get; set; }
-        public CarHire CarHire { get; set; }
+        public CarHireObj CarHire { get; set; }
 
         [Key]
         public int CarExtraId { get; set; }

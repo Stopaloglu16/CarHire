@@ -12,7 +12,7 @@ namespace Domain.Entities.CarAggregate
     {
         public Car()
         {
-            CarHires = new HashSet<CarHire>();
+            CarHires = new HashSet<CarHireObj>();
         }
 
 
@@ -35,7 +35,7 @@ namespace Domain.Entities.CarAggregate
         public decimal Costperday { get; set; }
 
 
-        public virtual ICollection<CarHire> CarHires { get; private set; } = new List<CarHire>();
+        public virtual ICollection<CarHireObj> CarHires { get; private set; } = new List<CarHireObj>();
 
     }
 }

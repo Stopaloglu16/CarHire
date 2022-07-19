@@ -25,10 +25,10 @@ namespace Domain.Entities.BranchAggregate
 
 
         [InverseProperty("PickUpBranch")]
-        public ICollection<CarHire> PickUpBranchs { get; set; }
+        public ICollection<CarHireObj> PickUpBranchs { get; set; }
 
         [InverseProperty("ReturnBranch")]
-        public ICollection<CarHire> ReturnBranchs { get; private set; }
+        public ICollection<CarHireObj> ReturnBranchs { get; private set; }
 
     }
 }

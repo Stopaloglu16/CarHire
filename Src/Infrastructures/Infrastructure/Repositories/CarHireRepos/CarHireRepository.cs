@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Infrastructure.Repositories.CarHireRepos
 {
 
-    public class CarHireRepository : EfCoreRepository<CarHire>, ICarHireRepository
+    public class CarHireRepository : EfCoreRepository<CarHireObj>, ICarHireRepository
     {
         private readonly ApplicationDbContext _dbContext;
         public CarHireRepository(ApplicationDbContext dbContext) : base(dbContext)

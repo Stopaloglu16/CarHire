@@ -54,10 +54,11 @@ namespace Application.Aggregates.CarHireAggregate.Commands.Create
             try
             {
 
-                if( await _repo.CheckCarAvabilityById(request.CarId))
+                //if( await _repo.CheckCarAvabilityById(request.CarId))
+                if(true)
                 {
 
-                    var entity = new CarHire();
+                    var entity = new CarHireObj();
 
                     entity.CarId = request.CarId;
                     entity.UserId = request.UserId;

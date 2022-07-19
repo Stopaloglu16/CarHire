@@ -2,7 +2,7 @@
 
 namespace Domain.Entities.CarHireAggregate.EndPoints
 {
-    public class CarHireCreateRequest : IMapFrom<CarHire>
+    public class CarHireCreateRequest : IMapFrom<CarHireObj>
     {
 
         public CarHireCreateRequest()

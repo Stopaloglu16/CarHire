@@ -1,6 +1,7 @@
 using Application;
 using Application.Aggregates.CarBrandAggregate.Commands.Create;
 using Application.Aggregates.CarBrandAggregate.Queries;
+using Application.Aggregates.CarHireAggregate.Commands.Create;
 using Application.Common.Interfaces;
 using Application.Repositories;
 using CarHire.Services.Branchs;
@@ -9,6 +10,7 @@ using Infrastructure.Data;
 using Infrastructure.Data.EfCore;
 using Infrastructure.Repositories.AddressRepos;
 using Infrastructure.Repositories.BranchRepos;
+using Infrastructure.Repositories.CarHireRepos;
 using Infrastructure.Repositories.CarRepos;
 using Infrastructure.Repositories.UserAuth;
 using MediatR;
@@ -38,6 +40,7 @@ builder.Services.AddDbContext<WebIdentityContext>(options =>
 
 
 builder.Services.AddMediatR(typeof(CreateCarBrandCommand).Assembly);
+builder.Services.AddMediatR(typeof(CreateCarHireCommand).Assembly);
 builder.Services.AddMediatR(typeof(GetCarBrandsQuery).Assembly);
 
 
@@ -57,6 +60,8 @@ builder.Services.AddScoped<IBranchService, BranchService>();
 builder.Services.AddScoped<IBranchRepository, BranchRepository>();
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();
 builder.Services.AddScoped<ICarRepository, CarRepository>();
+builder.Services.AddScoped<ICarHireRepository, CarHireRepository>();
+
 
 
 // Add services to the container.

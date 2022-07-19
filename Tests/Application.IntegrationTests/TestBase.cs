@@ -56,39 +56,13 @@ namespace Application.IntegrationTests
 
 
 
-        public static async Task<TResponse> SendAsync<TResponse>(IRequest<TResponse> request)
-        {
-            using var scope = _scopeFactory.CreateScope();
-
-            var mediator = scope.ServiceProvider.GetService<IMediator>();
-
-            return await mediator.Send(request);
-        }
-
-
-        public static async Task<string> RunAsDefaultUserAsync()
-        {
-            var userName = "test@local";
-            var password = "Testing1234!";
-
-            //using var scope = _scopeFactory.CreateScope();
-
-            //var userManager = scope.ServiceProvider.GetService<UserManager<ApplicationUser>>();
-
-            //var user = new ApplicationUser { UserName = userName, Email = userName };
-
-            //var result = await userManager.CreateAsync(user, password);
-
-            //_currentUserId = user.Id;
-            await Task.Delay(1000);
-
-            return _currentUserId;
-        }
-
-
         public void UseSqlite()
         {
             _useSqlite = true;
         }
     }
+
+
+
+
 }
