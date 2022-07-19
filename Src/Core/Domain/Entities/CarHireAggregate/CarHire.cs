@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Domain.Entities.CarHireAggregate
 {
 
-    public class CarHire : BaseEntity<int>
+    public class CarHireObj : BaseEntity<int>
     {
 
         public int CarId { get; set; }

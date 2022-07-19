@@ -22,7 +22,7 @@ namespace Application.Common.Interfaces
         public DbSet<CarBrand> CarBrands { get; set; }
         public DbSet<CardDetail> CardDetails { get; set; }
         public DbSet<CarExtra> CarExtras { get; set; }
-        public DbSet<CarHire> CarHires { get; set; }
+        public DbSet<CarHireObj> CarHires { get; set; }
 
         public DbSet<CarModel> CarModels { get; set; }
         public DbSet<Role> Roles { get; set; }

@@ -28,12 +28,12 @@ namespace Application.IntegrationTests
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", true, true)
-                .AddEnvironmentVariables();
+            //var builder = new ConfigurationBuilder()
+            //    .SetBasePath(Directory.GetCurrentDirectory())
+            //    .AddJsonFile("appsettings.json", true, true)
+            //    .AddEnvironmentVariables();
 
-            _configuration = builder.Build();
+            //_configuration = builder.Build();
 
             var services = new ServiceCollection();
 
@@ -65,7 +65,7 @@ namespace Application.IntegrationTests
             //    TablesToIgnore = new[] { "__EFMigrationsHistory" }
             //};
 
-            EnsureDatabase();
+            //EnsureDatabase();
         }
 
         private void EnsureDatabase()

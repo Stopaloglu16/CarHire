@@ -8,15 +8,14 @@ using System.Threading.Tasks;
 namespace Application.IntegrationTests
 {
 
-    using static TestingCqrs;
-
+    
     public class TestBaseCqrs
     {
-        [SetUp]
-        public async Task SetUp()
-        {
-            await ResetState();
-        }
+        //[SetUp]
+        //public async Task SetUp()
+        //{
+        //    await ResetState();
+        //}
     }
     
 }
