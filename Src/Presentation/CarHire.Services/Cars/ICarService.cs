@@ -16,7 +16,5 @@ namespace CarHire.Services.Cars
 
         Task<UpdateCarResponse> UpdateAsync(UpdateCarRequest updateCarRequest);
 
-
-
     }
 }

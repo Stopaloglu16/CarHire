@@ -19,7 +19,6 @@
     <Folder Include="Aggregates\TempAggreate\Commands\Delete\" />
     <Folder Include="Aggregates\TempAggreate\Commands\Update\" />
     <Folder Include="Aggregates\TempAggreate\Queries\" />
-    <Folder Include="Aggregates\UserAggregate\EndPoints\" />
     <Folder Include="Common\Behaviours\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
