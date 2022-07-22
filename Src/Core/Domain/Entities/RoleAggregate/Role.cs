@@ -7,7 +7,6 @@ namespace Domain.Entities.RoleAggregate
     public class Role : BaseEntity<int>
     {
 
-
         [Required]
         [Column(TypeName = "varchar(150)")]
         public string RoleName { get; set; }
