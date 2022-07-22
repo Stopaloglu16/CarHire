@@ -45,22 +45,57 @@ namespace CarHire.Services.Users
             throw new NotImplementedException();
         }
 
-        public async Task<CreateUserResponse> Add(CreateAdminUserRequest createUserRequest)
+
+        public async Task<CreateUserResponse> AddAdminUser(CreateAdminUserRequest createUserRequest)
         {
             var myReturn = await _userRepository.AddAsync(
-                new User() {  
-                                    FullName = createUserRequest.FullName,
-                                    BranchId = createUserRequest.BranchId,
-                                    UserEmail = createUserRequest.UserEmail,
-                                    UserName = createUserRequest.UserName,
-                                    RoleGroupId = createUserRequest.RoleGroupId,
-                                    UserTypeId = createUserRequest.UserTypeId
-                                  });
+             new User()
+             {
+                 FullName = createUserRequest.FullName,
+                 UserEmail = createUserRequest.UserEmail,
+                 UserName = createUserRequest.UserName,
+                 RoleGroupId = createUserRequest.RoleGroupId,
+                 UserTypeId = createUserRequest.UserTypeId
+             });
 
-            if(myReturn == null) return new CreateUserResponse(0, new BasicErrorHandler("SystemIssue"));
+            if (myReturn == null) return new CreateUserResponse(0, new BasicErrorHandler("SystemIssue"));
 
-            return new CreateUserResponse(myReturn.Id,new BasicErrorHandler());
+            return new CreateUserResponse(myReturn.Id, new BasicErrorHandler());
         }
 
+        public async Task<CreateUserResponse> AddBranchUser(CreateBrancUserRequest createUserRequest)
+        {
+            var myReturn = await _userRepository.AddAsync(
+             new User()
+             {
+                 FullName = createUserRequest.FullName,
+                 BranchId = createUserRequest.BranchId,
+                 UserEmail = createUserRequest.UserEmail,
+                 UserName = createUserRequest.UserName,
+                 RoleGroupId = createUserRequest.RoleGroupId,
+                 UserTypeId = createUserRequest.UserTypeId
+             });
+
+            if (myReturn == null) return new CreateUserResponse(0, new BasicErrorHandler("SystemIssue"));
+
+            return new CreateUserResponse(myReturn.Id, new BasicErrorHandler());
+        }
+
+        public async Task<CreateUserResponse> AddCustomerUser(CreateCustomerUserRequest createUserRequest)
+        {
+            var myReturn = await _userRepository.AddAsync(
+             new User()
+             {
+                 FullName = createUserRequest.FullName,
+                 UserEmail = createUserRequest.UserEmail,
+                 UserName = createUserRequest.UserName,
+                 RoleGroupId = createUserRequest.RoleGroupId,
+                 UserTypeId = createUserRequest.UserTypeId
+             });
+
+            if (myReturn == null) return new CreateUserResponse(0, new BasicErrorHandler("SystemIssue"));
+
+            return new CreateUserResponse(myReturn.Id, new BasicErrorHandler());
+        }
     }
 }

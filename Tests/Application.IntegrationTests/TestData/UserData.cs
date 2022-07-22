@@ -10,6 +10,12 @@ namespace Application.IntegrationTests.TestData
         {
             CreateAdminUserRequest createUserRequest = new CreateAdminUserRequest();
 
+            createUserRequest.FullName = "User Admin";
+            createUserRequest.UserEmail = "user@hotmail.com";
+            createUserRequest.UserName = "UserAdmin";
+            createUserRequest.RoleGroupId = 1;
+            createUserRequest.UserTypeId = 1;
+
             return createUserRequest;
         }
 
@@ -20,9 +26,9 @@ namespace Application.IntegrationTests.TestData
             return userDto;
         }
 
-        public CreateAdminUserRequest CreateBranchUser()
+        public CreateBrancUserRequest CreateBranchUser()
         {
-            CreateAdminUserRequest createUserRequest = new CreateAdminUserRequest();
+            CreateBrancUserRequest createUserRequest = new CreateBrancUserRequest();
 
             return createUserRequest;
         }
@@ -34,9 +40,9 @@ namespace Application.IntegrationTests.TestData
             return userDto;
         }
 
-        public CreateAdminUserRequest CreateCustomerUser()
+        public CreateCustomerUserRequest CreateCustomerUser()
         {
-            CreateAdminUserRequest createUserRequest = new CreateAdminUserRequest();
+            CreateCustomerUserRequest createUserRequest = new CreateCustomerUserRequest();
 
             return createUserRequest;
         }

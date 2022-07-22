@@ -2,7 +2,7 @@
 
 namespace Application.Aggregates.UserAggregate.Commands
 {
-    public class CreateAdminUserRequest : CreateUserRequest
+    public class CreateCustomerUserRequest : CreateUserRequest
     {
 
 

@@ -2,12 +2,15 @@
 
 namespace Application.Aggregates.UserAggregate.Commands
 {
-    public class CreateAdminUserRequest : CreateUserRequest
+    public class CreateBrancUserRequest : CreateUserRequest
     {
 
-
+     
         [Required]
         public int RoleGroupId { get; set; }
+
+        
+        public int? BranchId { get; set; }
 
 
     }

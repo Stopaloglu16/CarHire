@@ -14,7 +14,6 @@
     <Folder Include="Aggregates\CarHireAggregate\Commands\Update\" />
     <Folder Include="Aggregates\CarHireAggregate\Queries\" />
     <Folder Include="Aggregates\CarModelAggregate\Commands\Delete\" />
-    <Folder Include="Aggregates\RoleAggregate\" />
     <Folder Include="Aggregates\TempAggreate\Commands\Create\" />
     <Folder Include="Aggregates\TempAggreate\Commands\Delete\" />
     <Folder Include="Aggregates\TempAggreate\Commands\Update\" />

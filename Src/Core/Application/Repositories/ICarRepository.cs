@@ -4,7 +4,6 @@ using Domain.Entities.CarAggregate;
 
 namespace Application.Repositories
 {
-
     public interface ICarRepository : IRepository<Car>
     {
         Task<IEnumerable<CarDto>> GetCars();
@@ -12,7 +11,6 @@ namespace Application.Repositories
         Task<CarDto> GetCarById(int Id);
 
         Task<IEnumerable<CarDto>> GetCarByBranchId(int BranchId);
-
     }
 
 }

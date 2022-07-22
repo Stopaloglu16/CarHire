@@ -9,6 +9,11 @@ namespace CarHire.Services.Users
 
         Task<UserDto> GetUserById(int Id);
 
-        Task<CreateUserResponse> Add(CreateAdminUserRequest createUserRequest); 
+        Task<CreateUserResponse> AddAdminUser(CreateAdminUserRequest createUserRequest);
+
+        Task<CreateUserResponse> AddBranchUser(CreateBrancUserRequest createUserRequest);
+
+        Task<CreateUserResponse> AddCustomerUser(CreateCustomerUserRequest createUserRequest);
+
     }
 }
